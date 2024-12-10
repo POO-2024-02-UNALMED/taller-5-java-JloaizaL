@@ -6,14 +6,14 @@ import zooAnimales.Animal;
 
 public class Zona {
     private String nombre;
-    private Zoologico zoologico;
+    private Zoologico zoo;
     private ArrayList<Animal> animales = new ArrayList<>();
 
     public Zona() {}
 
-    public Zona(String nombre, Zoologico zoologico) {
+    public Zona(String nombre, Zoologico zoo) {
         this.nombre = nombre;
-        this.zoologico = zoologico;
+        this.zoo = zoo;
     }
 
     public void agregarAnimales(Animal animal) {
@@ -32,15 +32,19 @@ public class Zona {
         this.nombre = nombre;
     }
 
-    public Zoologico getZoologico() {
-        return zoologico;
+    public Zoologico getZoo() {
+        return zoo;
     }
 
-    public void setZoologico(Zoologico zoologico) {
-        this.zoologico = zoologico;
+    public void setZoo(Zoologico zoo) {
+        this.zoo = zoo;
     }
 
     public ArrayList<Animal> getAnimales() {
         return animales;
+    }
+
+    public void setAnimales(ArrayList<Animal> animales) {
+        this.animales = animales;
     }
 }

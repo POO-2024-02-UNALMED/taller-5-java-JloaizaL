@@ -5,7 +5,7 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private static int totalAnimales = 0;
+    private static int totalAnimales;
 
     public Animal() {
         totalAnimales++;
@@ -19,26 +19,22 @@ public class Animal {
         totalAnimales++;
     }
 
-    public static int getTotalAnimales() {
-        return totalAnimales;
-    }
-
-    public static String totalPorTipo() {
-        return String.format("Mamiferos: %d\nAves: %d\nReptiles: %d\nPeces: %d\nAnfibios: %d", 
-                              Mamifero.cantidadMamiferos(),
-                              Ave.cantidadAves(),
-                              Reptil.cantidadReptiles(),
-                              Pez.cantidadPeces(),
-                              Anfibio.cantidadAnfibios());
-    }
-
     public String movimiento() {
         return "desplazarse";
     }
 
+    public static String totalPorTipo() {
+        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
+               "Aves: " + Ave.cantidadAves() + "\n" +
+               "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
+               "Peces: " + Pez.cantidadPeces() + "\n" +
+               "Anfibios: " + Anfibio.cantidadAnfibios();
+    }
+
+    @Override
     public String toString() {
-        return String.format("Mi nombre es %s, tengo una edad de %d, habito en %s y mi genero es %s",
-                             nombre, edad, habitat, genero);
+        return "Mi nombre es " + nombre + ", tengo una edad de " + edad + 
+               ", habito en " + habitat + " y mi genero es " + genero;
     }
 
     public String getNombre() {
@@ -72,4 +68,9 @@ public class Animal {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+    public static int getTotalAnimales() {
+        return totalAnimales;
+    }
 }
+

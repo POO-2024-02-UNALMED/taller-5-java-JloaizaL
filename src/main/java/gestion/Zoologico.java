@@ -45,5 +45,8 @@ public class Zoologico {
     public ArrayList<Zona> getZona() {
         return zonas;
     }
-}
 
+    public void setZona(ArrayList<Zona> zonas) {
+        this.zonas = zonas;
+    }
+}
