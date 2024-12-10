@@ -7,8 +7,35 @@ public class Animal {
     private String genero;
     private static int totalAnimales;
 
+
+    public static int mamiferos = 0;
+    public static int aves = 0;
+    public static int reptiles = 0;
+    public static int peces = 0;
+    public static int anfibios = 0;
+
     public Animal() {
         totalAnimales++;
+    }
+
+    public static void incrementarMamiferos() {
+        mamiferos++;
+    }
+
+    public static void incrementarAves() {
+        aves++;
+    }
+
+    public static void incrementarReptiles() {
+        reptiles++;
+    }
+
+    public static void incrementarPeces() {
+        peces++;
+    }
+
+    public static void incrementarAnfibios() {
+        anfibios++;
     }
 
     public Animal(String nombre, int edad, String habitat, String genero) {
@@ -24,11 +51,11 @@ public class Animal {
     }
 
     public static String totalPorTipo() {
-        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\n" +
-               "Aves: " + Ave.cantidadAves() + "\n" +
-               "Reptiles: " + Reptil.cantidadReptiles() + "\n" +
-               "Peces: " + Pez.cantidadPeces() + "\n" +
-               "Anfibios: " + Anfibio.cantidadAnfibios();
+        return "Mamiferos: " + mamiferos + "\n" +
+               "Aves: " + aves + "\n" +
+               "Reptiles: " + reptiles + "\n" +
+               "Peces: " + peces + "\n" +
+               "Anfibios: " + anfibios;
     }
 
     @Override
