@@ -4,14 +4,13 @@ public class Ave extends Animal {
     private String colorPlumas;
     public static int halcones;
     public static int aguilas;
-    static int canA;
 
-    public Ave() { canA++;}
+    public Ave() {incrementarAves();}
 
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
-        canA++;
+        incrementarAves();
     }
 
     public static Ave crearHalcon(String nombre, int edad, String genero) {
@@ -25,7 +24,7 @@ public class Ave extends Animal {
     }
 
     public static int cantidadAves() {
-        return halcones + aguilas + canA;
+        return halcones + aguilas;
     }
 
     public String getColorPlumas() {

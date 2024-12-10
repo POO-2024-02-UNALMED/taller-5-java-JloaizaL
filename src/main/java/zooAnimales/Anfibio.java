@@ -6,12 +6,13 @@ public class Anfibio extends Animal {
     public static int ranas;
     public static int salamandras;
 
-    public Anfibio() {}
+    public Anfibio() {incrementarAnfibios();}
 
     public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
         super(nombre, edad, habitat, genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
+        incrementarAnfibios();
     }
 
     public static Anfibio crearRana(String nombre, int edad, String genero) {
